@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body, html{
+ 
+    background-color: #c68d6547;
+    /* background: url(/img/4533856a-b360-4ad9-b76f-5a77979c6289.jpg); */
+    background-repeat: no-repeat;
+    background-position:center left;
+    /* background-size: cover; */
+}
+
+.page{
+  min-height:100vh; /* 1 */
+	display:flex; /* 2 */
+	flex-direction:column; /* 3 */
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+
+
+
+}
+
+.container {
+   margin-top: 90px;
+   width: 100%;
+   max-width: 30rem;
+   background-color: transparent;
+   border-radius: 10px;
+   color: #3f3632;
+   border: #c68d65 solid 2px;
+   backdrop-filter: blur(15px);
+   overflow: hidden;
+   position: relative;
+
+}
+
+.wrapper{
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 200%;
+}
+
+section{
+  width: 50%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.login, .register {
+  flex : 1;
+}
+
+.hidden{
+  transform: translateX(-50%);
+}
+
+h1{
+  font-size: 2rem;
+  text-align: center;
+
+}
+form{
+  margin: 2rem 0;
+
+}
+.inputbox{
+  position: relative;
+  margin: 1rem 0;
+
+}
+.inputbox input{
+  width: 100%;
+  height: 3rem;
+  border: none;
+  outline: none;
+  border-bottom: #c68d65 solid 2px;
+  background-color: transparent;
+  color: #3f3632;
+  font-size: 1rem;
+  font-weight: 500;
+
+
+
+
+
+
+}
+
+.inputbox label{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  /* transform: translateY(-50%);
+  transition: 0.3s ease-in-out;
+  pointer-events: none;  */
+}
+
+.inputbox i {
+  position: absolute;
+  right: 5px;
+  top: 20px;
+  color: #c68d65;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -5px;
+  font-size: 1rem;
+
+}
+
+
+.forgot{
+  display: flex;
+  justify-content: center;
+
+}
+
+.forgot a {
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: 4px;
+  color: #3f3632;
+  font-weight: 600;
+}
+.forgot a:hover{
+  text-decoration: underline;
+
+}
+
+.login-button, .register-button{
+  width: 100%;
+  height: 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  margin: 1.5rem 0;
+  background-color: #3f3632;
+  color: #fff;
+}
+.login-button:hover , .register-button:hover{
+  background-color: #fff;
+  color: #836f65;
+}
+
+.register-option{
+  display: flex;
+  justify-content: end;
+}
+.register-option a{
+  text-decoration: none;
+  color:#3f3632;
+  font-weight: 600;
+  margin-left: 4px;
+
+
+}
+
+.register-option a:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width:500px) {
+  .container {
+   margin: 0 20px 0 20px;
+   height: 420px;
+
+
+  }
+  section {
+    padding: 1rem;
+  }
+
+}

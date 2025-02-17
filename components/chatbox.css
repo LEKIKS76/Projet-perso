@@ -1,0 +1,375 @@
+/* Container pour l'infobulle */
+.faq-chatbox-container {
+  position: fixed;
+  bottom: 80px;
+  left: 2.5%;
+  z-index: 1000;
+  transition: bottom 0.3s ease; /* Transition en douceur pour la position */
+  width: 300px; 
+  
+}
+
+
+/* Chatbox initialement cachée */
+.faq-chatbox {
+  display: none; /* Initialement cachée */
+  position: relative;
+  width: 300px;
+  height: 150px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease; /* Transition en douceur pour l'ouverture et la fermeture */
+}
+
+/* Quand la chatbox est ouverte */
+.faq-chatbox.open {
+  display: block; 
+  width: 600px;
+  height: 350px;
+}
+
+/* En-tête du chat */
+.chat-header {
+  background-color: #836f65;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.chat-header h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.close-chat {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Corps du chat */
+.chat-body {
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.chat-message {
+  margin-bottom: 15px;
+}
+
+.chat-message strong {
+  font-weight: bold;
+}
+
+.chat-message p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+/* Pied de la chatbox */
+.chat-footer {
+  display: flex;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  flex-direction: column;
+}
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+}
+.question {
+  padding: 8px;
+  margin: 5px 0;
+  background-color: #836f65;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.question:hover {
+  background-color: #836f65;
+}
+
+/* Bouton pour ouvrir le chat */
+.open-chat {
+  position: fixed;
+  bottom: 5px;
+  left: 20px;
+  padding: 15px;
+  background-color: #3f3632;
+  color: white;
+  border: 2px solid #c68d65;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  
+}
+
+.open-chat:hover {
+  background-color: #fff;
+  color: #836f65;
+}
+
+
+@media screen and (min-width : 1800px) {
+
+.open-chat {
+  font-size: 1rem ;
+  padding: 20px;
+}
+.faq-chatbox.open{
+  width: 500px;
+  height: auto;
+  bottom: -18%;
+  
+}
+.chat-header h3 {
+  font-size: 1.2rem;
+}
+.chat-body .chat-message {
+  font-size: 1.2rem;
+}
+
+.question{
+font-size: .9rem;
+}
+#answer {  
+  font-size: 1rem;
+}
+
+}
+@media screen and (max-width : 1799px) {
+
+.open-chat {
+  font-size: .8rem ;
+  padding: 14px;
+}
+.faq-chatbox.open{
+  width: 420px;
+  height: auto;
+  bottom: -19%;
+}
+.chat-header h3 {
+  font-size: 1rem;
+}
+.chat-body .chat-message {
+  font-size: 1rem;
+}
+ .question{
+  font-size: .8rem;
+}
+#answer {  
+  font-size: .9rem;
+}
+
+}
+
+@media screen and (max-width : 1440px) {
+
+.open-chat {
+  font-size: .8rem ;
+  padding: 12px;
+}
+.faq-chatbox.open{
+  width: 380px;
+  height: auto;
+  bottom: -25%;
+}
+.chat-header h3 {
+  font-size: .8rem;
+}
+.chat-body .chat-message {
+  font-size: .9rem;
+}
+ .question{
+  font-size: .7rem;
+}
+#answer {  
+  font-size: .8rem;
+}
+.faq-chatbox-container{
+  bottom: 50px;
+}
+
+}
+@media screen and (max-width : 1024px) {
+ 
+.open-chat {
+  font-size: .7rem ;
+  padding: 11px;
+}
+.faq-chatbox.open{
+  width: 380px;
+  height: auto;
+  bottom: -25%;
+}
+.chat-header h3 {
+  font-size: .7rem;
+}
+.chat-body .chat-message {
+  font-size: .8rem;
+}
+ .question{
+  font-size: .7rem;
+}
+#answer {  
+  font-size: .8rem;
+}
+
+}
+@media screen and (max-width : 1024px) {
+  
+.open-chat {
+  font-size: .8rem ;
+  padding: 11px;
+}
+
+.chat-header h3 {
+  font-size: .7rem;
+}
+
+
+
+}
+/* Pour les appareils de moins de 768px */
+@media screen and (max-width: 768px) {
+  
+  .faq-chatbox.open {
+    
+    height: auto;
+    width: 350px;
+    bottom: -30%;
+  }
+
+  .chat-header h3 {
+    font-size: .6rem;
+  }
+  .chat-body .chat-message {
+    font-size: .6rem;
+  }
+  .question{
+    font-size: .6rem;
+  }
+  #answer {  
+    font-size: .7rem;
+  }
+ 
+  .open-chat{
+    font-size: .7rem;
+    padding: 11px;
+  }
+}
+
+/* Pour les appareils de moins de 576px */
+@media screen and (max-width: 576px) {
+  .faq-chatbox-container {
+    /* width: 95%;  */
+    left: 2.5%; 
+   
+  }
+
+  .faq-chatbox.open {
+    
+    width: 320px;
+    height: auto;
+    bottom: -35%;
+  }
+
+ 
+
+ 
+  
+  .open-chat{
+    font-size: .7rem;
+    padding: 11px;
+  }
+  .chat-header h3 {
+    font-size: 0.8rem;
+  }
+  .chat-body .chat-message {
+    font-size: 0.8rem;
+  }
+   .question{
+    font-size: 0.7rem;
+  }
+  #answer {  
+    font-size: 0.8rem;
+  }
+  
+}
+
+
+
+@media screen and (max-width:514px) {
+  .faq-chatbox.open{
+    
+    width: 260px;
+  }
+  
+}
+@media screen and (max-width: 425px) {
+ 
+  .open-chat{
+    font-size: .7rem;
+    padding: 10px;
+    left : 1%;
+  }
+  .chat-header h3 {
+    font-size: 0.6rem;
+  }
+  .chat-body .chat-message {
+    font-size: 0.7rem;
+  }
+  .question{
+    font-size: 0.6rem;
+  }
+  #answer {  
+    font-size: 0.7rem;
+  }
+  
+
+}
+@media screen and (max-width: 320px) {
+  .faq-chatbox.open{
+    
+    width: 230px;
+  }
+  
+
+  
+
+  .chat-header h3 {
+    font-size: 0.5rem;
+  }
+
+  
+  #answer {  
+    font-size: 0.6rem;
+  }
+
+   .question{
+    font-size: 0.5rem;
+  }
+  .open-chat{
+    font-size: 0.5rem;
+    padding: 10px;
+  }
+  .chat-body .chat-message {
+    font-size: 0.7rem;
+  }
+}

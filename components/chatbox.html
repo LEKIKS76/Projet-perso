@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="FR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/components/chatbox.css" />
+  </head>
+  <body>
+    <!-- Infobulle Chatbox -->
+    <div class="faq-chatbox-container">
+      <div class="faq-chatbox">
+        <div class="chat-header">
+          <h3>FAQ - Chat</h3>
+          <button class="close-chat">×</button>
+        </div>
+        <div class="chat-body">
+          <div class="chat-message bot">
+            <strong>Réponse :</strong>
+            <p id="answer">
+              Sélectionnez une question ci-dessous pour voir la réponse.
+            </p>
+          </div>
+        </div>
+        <div class="chat-footer">
+          <div class="questions-list">
+            <button class="question" data-answer="1">
+              Comment puis-je adopter un chiot ?
+            </button>
+            <button class="question" data-answer="2">
+              Quels sont les prix des chiots ?
+            </button>
+            <button class="question" data-answer="3">
+              Comment prendre soin de mon chiot ?
+            </button>
+          </div>
+        </div>
+      </div>
+      <button class="open-chat">Ouvrir le chat</button>
+      <!-- Bouton pour ouvrir le chat -->
+    </div>
+
+    <script src="/JS/chatbox.js"></script>
+  </body>
+</html>

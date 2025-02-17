@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Corps principal */
+html,
+body {
+
+  
+  background-image: url("/img/TAKARAACCUEIL.jpg");
+  /* background-size:cover; */
+  background-position: center top;
+  background-size: contain;
+  /* background-attachment: fixed;  */
+  background-repeat: no-repeat;
+  background-color: #c68d6547;
+}
+
+.page {
+  min-height:100vh; /* 1 */
+	display:flex; /* 2 */
+	flex-direction:column; /* 3 */
+}
+main {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: -200px;
+  z-index: 1; /* Permet au contenu d'être au-dessus de l'image */
+  
+}
+
+text {
+  
+  font-size: 3.2rem;
+  font-weight:900;
+  text-transform: uppercase;
+  fill: url(#custom-gradient);
+  letter-spacing: 1px; /* Espacement pour plus de lisibilité */
+}
+
+
+/* 📱 Responsive pour tablettes et mobiles */
+@media (max-width: 768px) {
+  text {
+      font-size: 3rem; /* Réduit pour éviter les coupures */
+      letter-spacing: 3px;
+      font-weight: bolder;
+  }
+}
+
+@media (max-width: 480px) {
+  text {
+      font-size: 3rem; /* Plus petit pour mobile */
+      letter-spacing: 2px;
+      font-weight: bolder;
+  }
+}
+@media (max-width: 1800px) {
+
+  main {
+    margin-top: -60px;
+  }
+}

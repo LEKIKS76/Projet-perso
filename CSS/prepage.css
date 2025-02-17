@@ -1,0 +1,94 @@
+/* styles.css */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Masque la vidéo mobile par défaut */
+.mobile-video {
+  display: none;
+}
+
+/* Affiche la vidéo desktop par défaut */
+.desktop-video {
+  display: block;
+}
+
+video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Couvre toute la zone sans déformation */
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.logo {
+  width: 250px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Styles pour les écrans mobiles */
+@media (max-width: 767px) {
+  /* Affiche uniquement la vidéo mobile */
+  .desktop-video {
+    display: none;
+  }
+
+  .mobile-video {
+    display: block;
+  }
+
+  video {
+    object-fit: cover; /* Ajuste la vidéo pour éviter la déformation */
+    background-color: black; /* Fond noir pour combler les zones vides */
+  }
+
+  .logo {
+    width: 150px; /* Taille du logo réduite pour les petits écrans */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 120px; /* Réduction supplémentaire pour les très petits écrans */
+  }
+}
+
+@media (min-width: 768px) {
+  /* Ajuste la vidéo desktop pour les grands écrans */
+  video {
+    object-fit: cover;
+  }
+  
+}
+
+.redirectmainsite {
+  z-index: 9999;
+}

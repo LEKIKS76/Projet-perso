@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body,
+html {
+  background-color: #c68d6547;
+}
+
+/* .page{
+   min-height:100vh; 
+	display:flex; 
+	flex-direction:column;
+} */
+
+.bandereau-chiens {
+  margin-top: 57.79px;
+
+  text-align: center;
+
+  font-style: italic;
+  text-shadow: 3px 3px 3px #c68d65;
+  color: #836f65;
+}
+
+.container-chiens {
+  /* flex: 1; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  gap: 20px;
+  padding: 20px;
+}
+.rows {
+  display: flex;
+  flex-direction: column;
+  border-top: #c68d65 solid 3px;
+}
+.text {
+  width: 100%;
+  color: #3f3632;
+  font-weight: 600;
+  padding-right: 20px;
+  text-shadow: 1px 1px 2px #836f65;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.carousel_main {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.carousel_img {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel_item {
+  width: 100%;
+  height: auto;
+  flex: 0 0 auto;
+  text-align: center;
+}
+.carousel_img img {
+  width: 65%;
+  height: auto;
+  max-width: 480px;
+  border-radius: 10px;
+  padding: 1rem;
+  border-radius: 10%;
+}
+
+@media screen and (min-width: 800px) {
+  .bandereau-chiens {
+    margin-top: 90px;
+  }
+  .container-chiens {
+    /* flex: 1; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+    padding: 20px;
+  }
+  .rows {
+    display: flex;
+    flex-direction: row;
+  }
+  .text {
+    width: 100%;
+    height: auto;
+    padding-right: 20px;
+    font-size: 1.1rem;
+
+    /* display: flex;
+    flex-wrap: wrap; */
+  }
+  h3{
+    font-size: 1.4rem;
+  }
+  .carousel_item {
+    width: 100%;
+    height: auto;
+    flex: 0 0 auto;
+    text-align: end;
+  }
+  .carousel_main {
+    overflow: hidden;
+    position: relative;
+    width: 70%;
+    height: auto;
+  }
+  .carousel_img {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+  }
+  .carousel_img img {
+    width: 60%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 10px;
+    padding: 1rem;
+    border-radius: 10%;
+  }
+}
